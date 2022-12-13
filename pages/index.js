@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form'
 
 export default function Home() {
 
+  console.log(process.env.NEXT_PUBLIC_SENDGRID_API_KEY)
+
   const [formStep, setFormStep] = useState(0)
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({ mode: 'all' })
   const MAX_STEPS = 3
